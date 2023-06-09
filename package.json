@@ -1,10 +1,9 @@
 {
   "name": "components-wil",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "repository": "https://github.com/UladzislauPapliouka/ModsenBlogComponents.git",
   "author": "Uladzislau Papliouka <uladzislau.papliouka@gmail.com>",
   "license": "MIT",
-  "type": "module",
   "scripts": {
     "rollup": "rollup -c",
     "storybook": "storybook dev -p 6006",

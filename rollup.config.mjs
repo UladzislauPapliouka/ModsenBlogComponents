@@ -2,7 +2,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
-
+import copy from "rollup-plugin-copy";
 import packageJson from "./package.json" assert {type:"json"};
 
 import postcss from "rollup-plugin-postcss";
@@ -40,12 +40,18 @@ export default [
                 // are always bundled with the code, not copied to /dist
                 limit: Infinity,
             }),
+            copy({
+                targets: [
+                    // Need to copy the files over for usage
+                    { src: "src/assets/fonts", dest: [`dist/esm/assets`,`dist/cjs/assets`] },
+                ],
+            }),
             terser(),
 
         ],
     },
     {
-        input: "dist/esm/index.d.ts",
+        input: "dist/esm/types/index.d.ts",
         output: [{ file: "dist/index.d.ts", format: "esm" }],
         plugins: [dts()],
         external: [/\.css$/,/\.scss$/],
