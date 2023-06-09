@@ -1,0 +1,31 @@
+{
+  "name": "components-wil",
+  "version": "0.0.2",
+  "repository": "https://github.com/UladzislauPapliouka/ModsenBlogComponents.git",
+  "author": "Uladzislau Papliouka <uladzislau.papliouka@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "rollup": "rollup -c"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@rollup/plugin-typescript": "^8.3.0",
+    "@types/react": "^17.0.34",
+    "react": "^17.0.2",
+    "rollup": "^2.60.0",
+    "rollup-plugin-dts": "^4.0.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tslib": "^2.5.3",
+    "typescript": "^4.4.4"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "postcss": "^8.4.24"
+  }
+}
