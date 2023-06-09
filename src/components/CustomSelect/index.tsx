@@ -1,7 +1,7 @@
 import React, { useLayoutEffect, useRef, useState } from 'react';
 
-import { CheckIcon } from '@assets/social';
-import SelectItemsList from '@components/SelectItemsList';
+import { CheckIcon } from '../../assets/social';
+import SelectItemsList from '../SelectItemsList';
 
 import styles from './customSelect.module.scss';
 
