@@ -1,4 +1,4 @@
-import { type Tags } from '@/types';
+import { type Tags } from '../../types';
 
 interface ITag {
   text: `${Tags}`;

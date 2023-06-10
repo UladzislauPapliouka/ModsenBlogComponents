@@ -1,7 +1,7 @@
 import React, { type FC } from 'react';
 
-import type ITag from '@components/Tag/types';
-import Typography from '@components/Typography';
+import type ITag from './types';
+import Typography from '../Typography';
 
 import styles from './tag.module.scss';
 

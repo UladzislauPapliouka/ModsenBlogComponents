@@ -1,23 +1,23 @@
 import React from "react";
 import type { Meta,StoryObj } from '@storybook/react';
 
-import  Input from './index';
+import  Tag from './index';
 
-const meta: Meta<typeof Input> = {
-    component: Input,
+const meta: Meta<typeof Tag> = {
+    component: Tag,
 };
 
 export default meta;
-type Story = StoryObj<typeof Input>;
+type Story = StoryObj<typeof Tag>;
 
 export const Primary: Story = {
     args:{
-     value:'Test'
+        text:'Business'
     },
 };
-export const WithError: Story = {
+export const Active: Story = {
     args:{
-        value:'Test',
-        errorMessage:"Too long..."
+        ...Primary.args,
+        active:true
     },
 };

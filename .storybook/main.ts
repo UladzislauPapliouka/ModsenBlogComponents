@@ -5,6 +5,7 @@ const config: StorybookConfig = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
+    "@storybook/preset-scss",
   ],
   framework: {
     name: "@storybook/react-webpack5",
@@ -13,5 +14,6 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
+  staticDirs: ['../src/assets'],
 };
 export default config;

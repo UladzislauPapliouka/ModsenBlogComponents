@@ -1,24 +1,23 @@
 import React from "react";
 import type { Meta,StoryObj } from '@storybook/react';
 
-import  Button from './Button';
+import  Input from './index';
 
-const meta: Meta<typeof Button> = {
-    component: Button,
+const meta: Meta<typeof Input> = {
+    component: Input,
 };
 
 export default meta;
-type Story = StoryObj<typeof Button>;
+type Story = StoryObj<typeof Input>;
 
 export const Primary: Story = {
     args:{
-        variant:"primary",
-        children:'Click'
+     value:'Test'
     },
 };
-export const Secondary: Story = {
+export const WithError: Story = {
     args:{
-        ...Primary.args,
-        variant:'secondary'
-    }
+        value:'Test',
+        errorMessage:"Too long..."
+    },
 };
